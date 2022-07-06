@@ -36,14 +36,16 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: big ? 2 : 1,
-      child: RaisedButton(
-        color: color,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: color,
+        ),
         child: Text(
           text,
           style: TextStyle(
             color: Colors.white,
             fontSize: 32,
-            fontWeight: FontWeight.w200,
+            fontWeight: FontWeight.w300,
           ),
         ),
         onPressed: () => cb(text),
